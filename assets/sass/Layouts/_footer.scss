@@ -1,0 +1,113 @@
+footer {
+    overflow: hidden;
+    background-image: url(../img/footer_background.jpg);
+    @include styleBackgroundImage(bottom, cover, 520px);
+    padding-top: $pd-9;
+    margin-top: -200px;
+    position: relative;
+    .footer__content {
+        margin-top: 50px;
+        h4 {
+            margin-bottom: $mg-9;
+            font-family: "Montserrat", sans-serif;
+            font-weight: $fw-3;
+            color: $color-white-1;
+        }
+        .col-lg-3 {
+            ul {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: $color-white;
+                    font-size: $fs-2;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+                li {
+                    p {
+                        font-size: $fs-2;
+                    }
+                }
+            }
+        }
+        .footer__contactus {
+            margin-left: -50px;
+            li {
+                margin-bottom: 15px;
+                color: white;
+                p {
+                    display: inline;
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+                i {
+                    font-size: 14px;
+                    margin: 5px;
+                }
+            }
+        }
+        .footer__links {
+            width: 230px;
+            li {
+                font-size: 15px;
+                font-weight: 200;
+                margin-bottom: 20px;
+                border-bottom: 1px solid $color-gray-4;
+            }
+        }
+        .footer__about {
+            @extend .footer__links;
+        }
+        .footer__subscribe {
+            #inputEmail {
+                display: block;
+                border: 1px solid $color-white-1;
+                background-color: transparent;
+                padding: 15px 30px;
+                border-radius: $radius-1;
+                text-align: center;
+                color: $color-white-1;
+                margin-bottom: $mg-2;
+                outline: none;
+                &:focus {
+                    border: 1px solid $color-white;
+                }
+                &::placeholder{
+                    color: $color-white-1;
+                }
+            }
+            button{
+                font-family: 'Montserrat', sans-serif;
+                    @include styleButton(15px, 75px,$color-white, 1px solid $color-white, $radius-1 );
+                    @include styleText($color-black,15px, $fw-2);
+                    text-transform: uppercase;
+                    background-image: linear-gradient($color-purple, $color-purple);
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 0%;
+                    transition: background-size 0.2s, color 0.2s;
+                    &:hover{
+                        color: $color-white;
+                        background-size: 100% 100%;
+                    }
+            }
+        }
+    }
+}
+
+@include mediaQuery ("extra-large"){
+    footer{
+        margin-top: -165px;
+    }
+}
+@include mediaQuery ("large"){
+    margin-top: 0px;
+}
+
+@include mediaQuery ("medium"){
+    margin-top: 50px;
+}
+@include mediaQuery ("small"){
+    margin-top: 100px;
+}

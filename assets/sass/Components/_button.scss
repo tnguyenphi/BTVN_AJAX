@@ -1,0 +1,9 @@
+//Header
+
+.btnHeader{
+    @include styleButton($pd-6,$pd-1,$color-1, $bd-1, $bd-radius-1);
+    @include styleText($color-white-1,$fs-1,$fw-2);
+    &:hover {
+        @include styleButtonHover($color-white-1,$color-black-1, solid 0.5px $color-1 );
+    }
+}

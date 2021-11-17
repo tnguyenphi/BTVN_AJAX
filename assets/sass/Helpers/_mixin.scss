@@ -1,0 +1,45 @@
+// tạo biến styleText
+
+@mixin styleText($color,$fs,$fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin  styleButton($pd-y,$pd-x,$bg-color,$border,$radius) {
+    padding: $pd-y $pd-x;
+    background: $bg-color ;
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin styleButtonHover($bg-color,$color,$boder){
+    background: $bg-color;
+    color: $color;
+    border: $boder;
+}
+
+@mixin styleTitle($color, $fs, $fw){
+    font-family: 'Montserrat', sans-serif;
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleBackgroundImage($bg-position, $bg-size, $height){
+    background-position: $bg-position;
+    background-size: $bg-size;
+    height: $height;
+}
+
+@mixin mediaQuery($screen){
+     @if(map-has-key($map: $breakpoints, $key: $screen)){
+         $value: map-get($map: $breakpoints, $key: $screen);
+         @media screen and (max-width: $value){
+             @content;
+         }
+     }
+     @else{
+         @warn "Screen does not exist"
+     }
+ }

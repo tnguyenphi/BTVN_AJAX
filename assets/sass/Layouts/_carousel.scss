@@ -1,0 +1,89 @@
+#webCarousel{
+    .webCarousel__content{
+        height: 200px;
+        position: relative; 
+        top: -200px;
+        h3 {
+            @include styleText($color-1,$fs-2,$fw-2);
+        }
+        h1{
+            @include styleText($color-black-1,$fs-9,$fw-3)
+        }
+    }
+    .headerWeb__img2{
+        position: relative;
+        z-index: -5;
+        img{
+            transform: scale(1);
+        }
+    }
+}
+
+@include mediaQuery ("extra-large"){
+    .webCarousel__content{
+        .row{
+            margin-left: 0;
+            .text{
+                h3{
+                    font-size: 35px;
+                }
+                text-align: left;
+            }
+            .image{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@include mediaQuery ("large"){
+    .webCarousel__content{
+        margin-top: 30%;
+        margin-bottom: 30%;
+        height: 195px;
+        .row{
+            margin-left: $mg-14 + 4px;
+            .text{
+                h1{
+                    margin-top: $mg-14 + 4px;
+                }
+                h3{
+                    font-size: 25px;
+                }
+            }
+            .image{
+                img{
+                    margin-left: $mg-15;
+                    margin-top: $mg-16;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@include mediaQuery ("medium"){
+    .webCarousel__content{
+        height: 195px;
+        .row{
+            .image{
+                img{
+                    margin-left: $mg-15;
+                    margin-top: $mg-15;
+                }
+            }
+        }
+    }
+}
+@include mediaQuery ("small"){
+    .webCarousel__content{
+        .row{
+            .text{
+                h3{
+                    font-size: 20px;
+                    width: 95%;
+                }
+            }
+        }
+    }
+}

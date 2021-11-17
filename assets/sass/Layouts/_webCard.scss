@@ -1,0 +1,79 @@
+
+
+.webCard{
+    overflow: hidden;
+    background-image: url(../img/Violet_top_left_wave.png);
+    background-repeat: no-repeat;
+    background-position: -100px;
+    background-size: 800%;
+    // position: relative;
+    // top: -350px;
+   
+    height: 750px;
+    .card{
+        border-radius: 10px;
+        height: 350px;
+        width: 250px;
+        z-index: 100;
+        transition: all 1s;
+        h5{
+            @include styleText($color-1,0.75rem,$fw-2);
+            text-align: center;
+        }
+        h3{
+            @include styleText($color-black-1,$fs-3,$fw-3);
+            text-align: center;
+        }
+        p{
+            @include styleText($color-black-1,$fs-1,$fw-1);
+            text-align: center;
+        }
+        &:hover {
+            box-shadow: 0 0px 20px 0px;
+        }
+    }
+    // .webCard__img1{
+    //     position: relative;
+    //     top: -800px;
+    //     .webCard__img3{
+    //         transform: scale(3);
+    //         z-index: 0;
+    //     }
+    // }
+    .webCard__img2{
+        position: relative;
+        top: -400px;
+        left: -200px;
+        .img-fluid{
+            transform: scale(1.8);
+            z-index: 0;
+        }
+    }
+}
+
+@include mediaQuery ("extra-large"){
+    .webCard{
+        overflow: hidden;
+    }
+}
+@include mediaQuery ("large"){
+    .webCard{
+        overflow: visible;
+        // margin-top: 50%;
+        margin-bottom: 120%;
+    }
+}
+
+@include mediaQuery ("medium"){
+    .webCard{
+        overflow: visible;
+        margin-bottom: 150%;
+    }
+}
+
+@include mediaQuery ("small"){
+    .webCard{
+        overflow: visible;
+        margin-bottom: 170%;
+    }
+}

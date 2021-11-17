@@ -1,0 +1,155 @@
+.webForm {
+    // background-image: url(../img/accent_bottom_wave_01.png);
+    // @include styleBackgroundImage(center, contain, 710px);
+    // background-repeat: no-repeat;
+    // background-position-y: 170px;
+    margin-top: 50px;
+    .register__content {
+        margin-left: $mg-7;
+        margin-right: $mg-4;
+        .register__item {
+            box-shadow: 0 30px 30px -10px $color-gray-2;
+            width: 400px;
+            padding-bottom: 80px;
+            padding-top: 30px;
+            background-color: $color-white;
+            border-radius: $radius-2;
+            h1 {
+                @include styleText($color-black, $fs-6, $fw-3);
+                text-align: center;
+                font-family: "Montserrat", Arial, Helvetica, sans-serif;
+                padding-bottom: 20px;
+            }
+            .w-75 {
+                margin-left: 30px;
+                .form-group {
+                    position: relative;
+                    .form__icon {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 5px;
+                        z-index: 1;
+                        color: $color-purple;
+                    }
+                    .form-control {
+                        padding-left: 40px;
+                        border-radius: $radius-1;
+                        @include styleText($color-gray-3, $fs-2, $fw-1);
+                    }
+                    ::placeholder {
+                        @include styleText($color-gray-3, $fs-2, $fw-1);
+                    }
+                    .register__textarea{
+                        .form__icon{
+                            @extend .form__icon;
+                            left: 15px;
+                            bottom: 55px;
+                        }
+                        .form-control{
+                            @extend .form-control;
+                            height: 90px;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+                .formSubmit{
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                    @include styleButton(15px, 60px, $color-purple, solid $color-purple, $radius-1);
+                    background-image: linear-gradient($color-white, $color-white);
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 0%;
+                    transition: background-size 0.2s, color 0.2s;
+                    
+                    @include styleText($color-white, $fs-1 - 2px, $fw-5);
+                    font-family: 'Montserrat', sans-serif;
+                    text-transform: uppercase;
+                    
+                    &:hover{
+                        color: $color-purple;
+                        background-size: 100% 100%;
+                    }
+                }
+                
+            }
+        }
+    }
+    .webForm__img{
+        position: relative;
+        bottom: 200px;
+        z-index: -5;
+    }
+}
+@include mediaQuery ("extra-large"){
+    .webForm{
+        overflow: hidden;
+        margin-top: 10%;
+        margin-bottom: -20%;
+        margin-left: -20%;
+    }
+}
+@include mediaQuery ("large"){
+    .webForm{
+        margin-top: 10%;
+        margin-bottom: -26%;
+        margin-left: 0%;
+        overflow: hidden;
+        .register__content{   
+            
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+        .register__item{
+            width: 99%;
+            h1{
+                padding-top: $pd-10 - 2px;
+            }
+        }
+    }
+}
+
+@include mediaQuery ("medium"){
+    .webForm{
+        margin-top: -30%;
+        margin-bottom: -28%;
+        margin-left: -20%;    
+        overflow: hidden;
+        .register__content{
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+        .register__item{
+            width: 99%;
+            h1{
+                padding-top: $pd-10 - 2px;
+            }
+        }
+    }
+
+}
+@include mediaQuery ("small"){
+    .webForm{
+        margin-top: 50%;
+        margin-bottom: 0%;
+        margin-left: -40%;
+        overflow: hidden;
+        .register__content{
+            img{
+                width: 70%;
+                height: 70%;
+            }
+        }
+        .register__item{
+            width: 99%;
+            h1{
+                padding-top: $pd-10 - 2px;
+            }
+        }
+    }
+
+}
